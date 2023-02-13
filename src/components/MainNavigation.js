@@ -8,18 +8,18 @@ function MainNavigation(){
                 <ul className={classes.list}>
                     <li>
                         {/* <Link to='/'>Home</Link> */}
-                        <NavLink to='/' 
+                        <NavLink to='' 
                         className={({isActive})=>
-                        isActive ? classes.active : undefined
-                        }>Home
+                        isActive ? classes.active : undefined}
+                        end >Home
                         </NavLink>
                     </li>
                     <li>
                         {/* <Link to='/products'>Products</Link> */}
-                        <NavLink to='/products' 
+                        <NavLink to='products' 
                         className={({isActive})=>
                         isActive ? classes.active : undefined}
-                        >Products
+                        end >Products
                         </NavLink>
                     </li>
                 </ul>

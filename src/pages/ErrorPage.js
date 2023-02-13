@@ -1,6 +1,4 @@
 
-
-
 import MainNavigation from "../components/MainNavigation";
 
 

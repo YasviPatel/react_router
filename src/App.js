@@ -4,6 +4,7 @@ import HomePage from './pages/Home'
 import Products  from "./pages/Products";
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/ErrorPage";
+import ProductDetails from "./pages/ProductDetails";
 
 // const router=createBrowserRouter([
 //     { path:'/',element:<HomePage/>},
@@ -20,14 +21,28 @@ import ErrorPage from "./pages/ErrorPage";
 // const router=createBrowserRouter(routerDefinitions)
 
 
+// const router=createBrowserRouter([
+//   {
+//     path:'/',
+//     element:<RootLayout/>,
+//     errorElement:<ErrorPage/>,
+//     children:[
+//       {path:'/',element:<HomePage/>},
+//       {path:'/products',element:<Products/>},
+//       {path:'/products/:productId',element:<ProductDetails/>}
+//     ]
+//   }
+// ])
+
 const router=createBrowserRouter([
   {
     path:'/',
     element:<RootLayout/>,
     errorElement:<ErrorPage/>,
     children:[
-      {path:'/',element:<HomePage/>},
-      {path:'/products',element:<Products/>}
+      {index:true,element:<HomePage/>},  //path:''
+      {path:'products',element:<Products/>},
+      {path:'products/:productId',element:<ProductDetails/>}
     ]
   }
 ])
