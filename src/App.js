@@ -1,10 +1,11 @@
 
-import { createBrowserRouter,RouterProvider,createRoutesFromElements,Route} from "react-router-dom";
+import { createBrowserRouter,RouterProvider,createRoutesFromElements,Route, Navigate} from "react-router-dom";
 import HomePage from './pages/Home'
 import Products  from "./pages/Products";
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/ErrorPage";
 import ProductDetails from "./pages/ProductDetails";
+import ProductDetailsEdit from "./pages/ProductDetailsEdit";
 
 // const router=createBrowserRouter([
 //     { path:'/',element:<HomePage/>},
@@ -42,7 +43,10 @@ const router=createBrowserRouter([
     children:[
       {index:true,element:<HomePage/>},  //path:''
       {path:'products',element:<Products/>},
-      {path:'products/:productId',element:<ProductDetails/>}
+      {path:'hello',element:<Navigate to='/products'/>},
+      {path:'products/:productId',element:<ProductDetails/>},
+      {path:'products/:productId/:action',element:<ProductDetailsEdit/>}
+
     ]
   }
 ])
